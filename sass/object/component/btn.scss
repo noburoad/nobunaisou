@@ -1,0 +1,16 @@
+.c-btn {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 18px 10px;
+    &__primary {
+    background: rgb(27, 74, 161);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: all .2s;
+    }
+    &:hover {
+        opacity: .8;
+    }
+}

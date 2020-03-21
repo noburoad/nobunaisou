@@ -1,0 +1,188 @@
+//===========================
+//NEWS部のボックス
+//===========================
+
+.u-newsBox {
+    width: 200px;
+    text-align: center;
+    margin:48px auto;
+    position: relative;
+    padding: 0.25em 1em;
+    border: solid 2px rgb(27, 74, 161);
+    border-radius: 3px 0 3px 0;
+}
+.u-newsBox:before,.u-newsBox:after
+{
+    content: '';
+    position: absolute;
+    width:10px;
+    height: 10px;
+    border: solid 2px rgb(27, 74, 161);
+    border-radius: 50%;
+}
+.u-newsBox:after {
+    top:-10px;
+    left:-10px;
+}
+.u-newsBox:before {
+    bottom:-10px;
+    right:-10px;
+}
+.u-newsBox p {
+    margin: 0; 
+    padding: 0;
+}
+//===========================
+//アローリンク
+//===========================
+.u-arrowLink {
+    text-align: right;
+    &__text {
+        display: inline-block;
+        position: relative;
+        padding-left: 57px;
+        font-size: 1.1rem;
+        transition: all .2s;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            width: 35px;
+            height: 7px;
+            margin-top: -4px;
+            background: url(../img/arrow.jpg);
+            background-size: 35px 7px;
+            transition: all .4s;
+        }
+        &:hover:before {
+            transition: all .5s;
+            transform: translateX(10px);
+        }
+    }
+}
+//===========================
+//ABOUT等のボタン
+//===========================
+.u-btn__about {
+    margin: 4rem  auto;
+    width: 65%;
+}
+.u-btn__recruit {
+    margin: 3rem  auto;
+    text-align: right;
+    width: 65%;
+}
+.u-btn__contact {
+    width: 65%;
+    margin: 0 auto;
+}
+//===========================
+//ABOUT等のフェードイン
+//===========================
+.about {
+    &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 80px;
+        left: calc(48% + 60px);
+        width: 1200px;
+        height: 250px;
+        background-image: url(../img/ABOUT_line.jpg);
+        background-size: 1200px 250px;
+        z-index: -10;
+        opacity: 0;
+        transition: all 2.0s;
+    }
+    .fade-in::before {
+        position: absolute;
+        top: 80px;
+        left: 48%;
+        opacity: 0.8;
+    }
+}
+//===========================
+//RECRUITのバックグラウンド
+//===========================
+.u-recruit__bg {
+    width: 100%;
+    background-image: url(../img/RECRUIT_bg.jpg);
+    background-size: cover ;
+    height: 700px;
+    @include mq() {
+        height: 550px;
+    }
+}
+//===========================
+//WORKのイメージエリア
+//===========================
+.u-img__around {
+    margin-top: 3rem;
+    @include mq() {
+        margin-top: 1rem;
+    }
+    margin-bottom: 5rem;
+    width: 100%;
+    padding: 0 2rem;
+    height: 19rem;
+    display: flex;
+    justify-content: space-around;
+    @include mq() {
+        flex-direction: column;
+        height: 700px;
+    }
+    align-items: center;
+    overflow: hidden;
+    .work-img {
+        padding: 0 0.2rem;
+    }
+    .work-img img{
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+}
+.u-work__info {
+    position: relative;
+    margin: -2.5rem 0 0 1.8rem;
+    padding: 1rem 2.1rem 1.5rem;
+    @include mq() {
+        padding: 0.8rem 1.1rem 0.5rem;
+        opacity: 0.8;
+    }
+    border-top: 2px solid rgb(27, 74, 161);
+    border-radius: 4px;
+    background-color: #fff;
+    z-index: 100;
+}
+.u-work__date {
+    text-align: left;
+    padding-left: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.u-workFade__fill {
+    display: block;
+    img {
+        width: 15%;
+        @include mq() {
+            width: 40%;
+        }
+    }
+    
+}
+//===========================
+//CONTACT
+//===========================
+.u-contactFade__fill {
+    display: block;
+    img {
+        width: 15%;
+        @include mq() {
+            width: 40%;
+        }
+    }
+}

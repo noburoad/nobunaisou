@@ -1,0 +1,33 @@
+.c-news {
+    width: calc(100% - 150px);
+    margin-bottom: 45px;
+    @include mq() {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    li {
+        display: flex;
+        margin-bottom: 23px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed #d2d2d2;
+    }
+    a {
+        color: $font-color__default;
+    }
+    &__item {
+        width: 15.5em;
+        margin-bottom: 5px;
+    }
+    &__date {
+        display: inline-block;
+        font-weight: 600;
+        width: 7em;
+        padding: 0 0 0 10px;
+        font-size: 1.2em;
+        letter-spacing: 0.02em;
+    }
+    &__topics {
+        border: 1px solid rgb(27, 74, 161);
+        padding: 3px;
+    }
+}

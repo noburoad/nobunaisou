@@ -1,0 +1,70 @@
+.about-2 {
+    @include mq() {
+        flex-direction: column-reverse!important;
+    }
+}
+.p-2col {
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include mq() {
+        flex-direction: column;
+        width: 100%;
+    }
+    padding-top: 140px;
+    @include mq() {
+        padding-top: 80px;
+    }
+    overflow: hidden;
+    &__text {
+        box-sizing: border-box;
+        position: relative;
+        padding: 5% 4%;
+        width: 50%;
+        @include mq() {
+            width: 100%;
+            padding: 5% auto;
+        }
+        overflow: hidden;
+    }
+    &__title {
+        font-size: 2.3rem;
+        margin-bottom: 50px!important;
+        @include mq(){
+            margin-top: 8px;
+            text-align: center;
+        }
+        line-height: 1.4;
+        br {
+            display: none;
+            @include mq() {
+                display: block;
+            }
+        }
+    }
+    &__lead {
+        font-size: 1.2rem;
+        @include mq() {
+            font-size: 1rem;
+            text-align: left;
+            padding-left: 8%;
+        }
+        margin-top: 36px;
+        margin-bottom: 45px;
+        line-height: 2;
+    }
+    &__img {
+        opacity: 1;
+        width: 50%;
+        @include mq() {
+            width: 100%;
+        }
+        box-sizing: border-box;
+        padding: 0 16px;
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    }
+}

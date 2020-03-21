@@ -1,0 +1,19 @@
+.l-header {
+  width: 100%;
+  height: 80px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: fixed;
+  transition: 0.3s;
+  background: #1b4aa1;
+  z-index: 2;
+}
+
+.l-header__title {
+  font-size: 30px;
+  font-weight: bold;
+}

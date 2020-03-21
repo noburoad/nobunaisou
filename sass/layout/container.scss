@@ -1,0 +1,19 @@
+.l-container {
+    width: 980px;
+    @include mq() {
+        width: 100%;
+    }
+    margin-left: auto;
+    margin-right: auto;
+    &__body {
+        @include mq() {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
+    &__title {
+        font-size: 2.2rem;
+        line-height: 1;
+        text-align: center;
+    }
+}

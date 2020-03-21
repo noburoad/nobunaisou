@@ -1,0 +1,77 @@
+.js-fade__type__text {
+    text-align: center;
+    transition: 2s;
+    transform: translateY(70px);
+    opacity: 0;
+}
+.js-fade__type__text:last-of-type{
+    margin-bottom: 0;
+}
+.js-fade__text {
+    transform: translateY(0);
+    opacity: 1;
+}
+.js-fade__type__img {
+    text-align: center;
+    transition: 2s;
+    transform: translateY(70px);
+    opacity: 0; 
+    z-index: 2;
+}
+.js-fade__type__img:nth-last-of-type(2){transition-delay: .2s;}
+.js-fade__type__img:nth-last-of-type(3){transition-delay: .3s;}
+
+.js-fade__img {
+    transform: translateY(0);
+    opacity: 1;
+}
+.js-aboutFadeRight__type__bg {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    transition: 2s;
+    transform: translateX(-48%);
+    opacity: 0;
+    @include mq() {
+        margin: 0 auto;
+        top: 0;
+        left: 10%;
+        img {
+        width: 300px
+        }
+    }
+}
+.js-aboutFade__bg {
+    transform: translateX(0);
+    opacity: 1;
+    @include mq() {
+        img {
+        width: 300px;
+        margin: 0 auto;
+        }
+    }
+}
+.js-recruitFade__type {
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    transition: all 2s;
+    transform: translateX(48%);
+    opacity: 0;
+    z-index: 0;
+    @include mq() {
+        img {
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+        }
+        top: 5%;
+        left: 10%;
+    }
+}
+.js-recruitFade {
+    transform: translateX(0);
+    opacity: 1;
+}

@@ -1,0 +1,74 @@
+//=======================================
+//ブレイクポイント
+//=======================================
+//マップ型変数
+$breakpoints: (
+    'sm': 'screen and (max-width: 414px)',
+    'md': 'screen and (max-width: 768px)',
+    'lg': 'screen and (max-width: 1000px)',
+    'xl': 'screen and (max-width: 1200px)',
+)!default;
+
+//============================================
+// mixin
+//============================================
+
+//メディアクエリ
+@mixin mq($breakpoint: sm) {
+    @media #{map-get($breakpoints,$breakpoint)} {
+        @content;
+    }
+}
+
+
+
+//=======================================
+//フォントカラー・サイズ・スペース等
+//=======================================
+$font-color__default: #777;
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #555;
+}
+
+$site-width: 980px;
+
+$font-size__s: 12px;
+$font-size__m: 16px;
+$font-size__l: 20px;
+$font-size__xl: 24px;
+$font-size__xxl: 28px;
+$font-size__3l: 32px;
+
+$space__s: 4px;
+$space__m: 8px;
+$space__l: 12px;
+$space__xl: 16px;
+$space__xxl: 24px;
+$space__3l: 36px;
+
+
+//=======================================
+//リンクの色
+//=======================================
+a:hover {
+    color: rgb(27, 74, 161);
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+    color: #fff;
+  }
+
+
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+    color: #fff;
+    &:hover {
+        color: rgb(248, 128, 31);
+    }
+}

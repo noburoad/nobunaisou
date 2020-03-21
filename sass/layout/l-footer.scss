@@ -1,0 +1,10 @@
+.l-footer {
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    &l-footer__Copyright {
+        margin: 0 auto;
+    }
+}
